@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color:	#FDEEF4;">
+  <section>
+    <h2>تسجيل الدخول</h2>
+    <form onsubmit="login(event)">
+      <label>البريد الإلكتروني</label>
+      <input type="email" required><br>
+
+      <label>كلمة المرور</label>
+      <input type="password" required>
+
+      <button type="submit">دخول</button>
+    </form>
+    <p id="login-msg"></p>
+  </section>
+
+  <script>
+    function login(event) {
+      event.preventDefault();
+      document.getElementById("login-msg").textContent = "تم تسجيل الدخول بنجاح!";
+    }
+  </script>
+</body>
+</html>
