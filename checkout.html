@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>الدفع الإلكتروني</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color:	#FDEEF4;">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="cart.html">سلة المشتريات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>الدفع الإلكتروني</h2>
+    <form onsubmit="submitPayment(event)">
+      <label>الاسم الكامل</label>
+      <input type="text" required><br>
+
+      <label>رقم البطاقة</label>
+      <input type="text" required placeholder="1234 5678 9012 3456"><br>
+
+      <label>تاريخ الانتهاء</label>
+      <input type="text" required placeholder="MM/YY"><br>
+
+      <label>رمز الأمان (CVV)</label>
+      <input type="text" required placeholder="123"><br>
+
+      <button type="submit">إتمام الدفع</button>
+    </form>
+    <p id="payment-msg"></p>
+  </section>
+
+  <script>
+    function submitPayment(event) {
+      event.preventDefault();
+      document.getElementById("payment-msg").textContent = "تمت عملية الدفع بنجاح! شكراً لتسوقك.";
+      localStorage.removeItem("cart");
+    }
+  </script>
+</body>
+</html>
