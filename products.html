@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>المنتجات</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color:	#FDEEF4;">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="cart.html">سلة المشتريات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>منتجاتنا</h2>
+    <div class="product-grid">
+      <div class="product-card">
+	  <img src="i1.png" alt="كيكة شوكولاتة" style="width:100%; height:auto;">
+        <h3>كيكة شوكولاتة</h3>
+        <button onclick="addToCart('45, 'كيكة شوكولاتة)">أضف للسلة</button>
+      </div>
+      <div class="product-card">
+	   <img src="i2.png" alt="كيكة فانيلا" style="width:100%; height:auto;">
+        <h3>كيكة فانيلا</h3>
+        <button onclick="addToCart('25, 'كيكة فانيلا)">أضف للسلة</button>
+      </div>
+      <div class="product-card">
+	   <img src="i3.png" alt="كيكة فراولة" style="width:100%; height:auto;">
+        <h3>كيكة فراولة</h3>
+        <button onclick="addToCart('35, 'كيكة فراولة)">أضف للسلة</button>
+      </div>
+	  <div class="product-card">
+	   <img src="i4.png" alt="كيكة ليمون" style="width:100%; height:auto;">
+        <h3>كيكة ليمون</h3>
+        <button onclick="addToCart('40, 'كيكة ليمون)">أضف للسلة</button>
+      </div>
+	   <div class="product-card">
+	   <img src="i5.png" alt="كيكة برتقال" style="width:100%; height:auto;">
+        <h3>كيكة برتقال</h3>
+        <button onclick="addToCart('35, 'كيكة برتقال)">أضف للسلة</button>
+      </div><br>
+	  <div class="product-card">
+	   <img src="i6.png" alt="كيكة زعفران" style="width:100%; height:auto;">
+        <h3>كيكة زعفران</h3>
+        <button onclick="addToCart('45, 'كيكة زعفران)">أضف للسلة</button>
+      </div>
+	  <div class="product-card">
+	   <img src="i7.png" alt="كيكة كارميل" style="width:100%; height:auto;">
+        <h3>كيكة كارميل</h3>
+        <button onclick="addToCart('35, 'كيكة كارميل)">أضف للسلة</button>
+      </div>
+	  <div class="product-card">
+	   <img src="i8.png" alt="كيكة فواكة" style="width:100%; height:auto;">
+        <h3>كيكة فواكة</h3>
+        <button onclick="addToCart('25, 'كيكة فواكة)">أضف للسلة</button>
+      </div>
+	  <div class="product-card">
+	   <img src="i9.png" alt="كيكة لوتس" style="width:100%; height:auto;">
+        <h3>كيكة لوتس</h3>
+        <button onclick="addToCart('50, 'كيكة لوتس)">أضف للسلة</button>
+      </div>
+	  <div class="product-card">
+	   <img src="i10.png" alt="كيكة بندق" style="width:100%; height:auto;">
+        <h3>كيكة بندق</h3>
+        <button onclick="addToCart('50, 'كيكة بندق)">أضف للسلة</button>
+      </div>
+	  <div class="product-card">
+	   <img src="i12.png" alt="كيكة التمر" style="width:100%; height:auto;">
+        <h3>كيكة التمر</h3>
+        <button onclick="addToCart('35, 'كيكة التمر)">أضف للسلة</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({ name, price });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert("تمت الإضافة إلى السلة!");
+    }
+  </script>
+</body>
+</html>
